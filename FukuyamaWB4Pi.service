@@ -1,0 +1,14 @@
+[Unit]
+Description=FukuyamaWB4Pi
+After=syslog.target
+
+[Service]
+Type=simple
+WorkingDirectory=/home/pi/workspace/FukuyamaWB4Pi
+ExecStart=/bin/sh startWB4Pi.sh
+TimeoutStopSec=20
+StandardOutput=null
+Restart=always
+
+[Install]
+WantedBy = multi-user.target
